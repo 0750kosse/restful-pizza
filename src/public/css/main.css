@@ -1,0 +1,15 @@
+* {
+  margin : 0;
+  border : 0;
+  padding : 0
+}
+
+body {
+  background-image: url('https://c0.wallpaperflare.com/preview/1001/706/544/carrots-chilli-food-foodie.jpg');
+  background-repeat: no-repeat;
+  max-width: 100%;
+}
+
+.navbar-container {
+  display: flex;
+}
