@@ -5,11 +5,122 @@
 }
 
 body {
+  background: lightgrey;
+  font-family: 'Oxygen Mono', monospace;
+  font-size: 21px;
+  line-height: 1.42857143;
   background-image: url('https://c0.wallpaperflare.com/preview/1001/706/544/carrots-chilli-food-foodie.jpg');
   background-repeat: no-repeat;
   max-width: 100%;
 }
 
-.navbar-container {
+/* NAV BAR */
+
+nav {
   display: flex;
+  }
+
+.menu-subheading__logo {
+  color: #fff;
+  line-height: 3;
+  margin-left:5%;
+  margin-right: 53%;
 }
+
+.menu-subheading__options {
+  border : 3px solid white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  }
+
+ul {
+  list-style-type: none;
+  display: flex;
+  }
+
+li {
+  color : #fff;
+  display: block;
+  float: left;
+  padding:1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration : 0.5s;
+}
+
+li a {
+  color:#fff;
+}
+
+li:hover,
+li:focus-within {
+  background-color: red;
+  cursor: pointer;
+  max-width: 7rem;
+}
+
+li:focus-within a {
+  outline: none;
+}
+
+ul li ul {
+  background-color: green;
+  visibility: hidden;
+  opacity: 0;
+  max-width: 7rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  right: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus  {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+	clear: both;
+  width: 100%;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  place-items: center center;
+}
+
+.main-content__menu {
+  color:#fff;
+  border : 3px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  transition: transform 1s;
+}
+
+.main-content__menu:hover{
+  transform: rotate(1080deg);
+  transform: scale(1.2);
+}
+
+
+
