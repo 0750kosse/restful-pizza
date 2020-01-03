@@ -109,17 +109,61 @@ ul li ul li {
   place-items: center center;
 }
 
-.main-content__menu {
-  color:#fff;
+input[type=submit] {
   border : 3px solid white;
   padding: 5px;
   border-radius: 10px;
   transition: transform 1s;
 }
 
-.main-content__menu:hover{
+input[type=submit]:hover{
   transform: rotate(1080deg);
   transform: scale(1.2);
+}
+
+/* MENU SECTION */
+.menu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.menu-item{
+  background: red;
+  width: 45%;
+  margin-top: 2em;
+}
+
+.menu-item__image {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3e/Pizza_au_thon%2C_Tunisie_4_mai_2017.jpeg');
+  background-size: cover;
+  width: 90%;
+  height: 150px;
+  margin: 0 5%;
+}
+
+.menu-item__name,
+.menu-item__size,
+.menu-item__customise,
+.menu-item__add {
+  width: 90%;
+  margin: 0 5%;
+}
+
+.menu-item__name,
+.menu-item__size { 
+  background: black;
+  color : white;
+}
+
+.menu-item__customise {
+  background:#1893CC;
+  color : white;
+}
+
+.menu-item__add {
+  background: #5B782A;
+  color : white;
 }
 
 

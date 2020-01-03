@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 
+const routes = require('./routes');
 const app = express();
 
 const handlebars = exphbs.create({
@@ -21,13 +22,10 @@ const port = 5000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/public')));
-
+app.use(routes);
 
 app.use(function (err, req, res, next) {
   res.status(422).send({ err: err._message })
 })
-app.get('/', function (req, res, next) {
-  res.render('home');
-});
 
 app.listen(port, () => console.log(`app listening on port ${port}`))
