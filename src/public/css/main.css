@@ -9,7 +9,10 @@ body {
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 21px;
   line-height: 1.42857143;
-  background-color: #fff;;
+  background-color: #fff;
+  margin : 0;
+  border : 0;
+  padding : 0
 }
 
 /* NAV BAR */
@@ -23,7 +26,7 @@ nav {
 }
 
 .menu-subheading__logo {
-  color: #fff;
+  color: #016391;
   line-height: 3;
   margin-left:5%;
   margin-right: 53%;
@@ -49,7 +52,7 @@ li {
 }
 
 li a {
-  color:#fff;
+  color: #016391;
 }
 
 li:hover,
@@ -79,9 +82,9 @@ ul li:hover > ul,
 ul li:focus-within > ul,
 ul li ul:hover,
 ul li ul:focus  {
+  display: block;
   visibility: visible;
   opacity: 1;
-  display: block;
 }
 
 ul li:hover > ul,
@@ -101,7 +104,6 @@ ul li ul li {
 .submenu-heading {
   font-size: 28px;
   color: #fff;
-  
   text-align: center
 }
 
@@ -172,6 +174,7 @@ background: #016391;
   display: flex;
   font-weight: 600;
   width: 100%;
+  height: 59px;
 }
 
 .personalise-menu-own,
@@ -179,6 +182,7 @@ background: #016391;
   color : #fff;
   padding:10px;
   text-align: center;
+  line-height: 1.9;
   width: 50%;
 }
 
@@ -198,7 +202,8 @@ background: #016391;
   margin: 0;
   place-items: center center;
   justify-content: space-evenly;
-  border: 1px solid #00aaf7;
+  height: 63px;
+  border: 2px solid #00aaf7;
   margin-top: 10px;
   background: #e8f5fd;
 }
@@ -230,6 +235,69 @@ background: #016391;
   font-weight: 600;
 }
 
+/* SYMBOL SECTION */
+.symbol-section {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:13px;
+  margin-bottom: 5px;
+}
+
+.symbol-section__veggie,
+.symbol-section__gluten,
+.symbol-section__hot {
+display: flex;
+margin: 0 10px;
+background-color : white;
+}
+
+.symbol-section__icon-veggie,
+.symbol-section__icon-gluten,
+.symbol-section__icon-hot {
+    margin-right: 5px;
+    background-color: green;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 1.8;
+    color: white;
+    font-weight: 700;
+}
+
+.symbol-section__icon-gluten {
+  background-color: #016391;
+}
+
+.symbol-section__icon-hot {
+  background-color: #e31837;
+}
+.symbol-section__text{
+  line-height: 1.8;
+  color: #016391;
+}
+
+.hot-spicy {
+color: black;
+}
+
+.fa-info {
+  background-color: #016391;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  color:#fff;
+  text-align: center;
+  padding:1px;
+}
+
+.my-info-icon{
+  vertical-align: middle;
+}
+
 /* MAIN CONTENT */
 
 .main-content {
@@ -252,24 +320,25 @@ background: #016391;
 }
 
 /* MENU SECTION */
+
 .menu {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   background-color: #fff;
+  margin-top: -15px;
 }
 
 .menu-item{
-  width: 46%;
-  margin-top: 2em;
+  width: 47%;
+  margin: 18px 0;
 }
 
-.menu-item:nth-child(odd) {
-  padding-right :10px;
-}
-
-.menu-item:nth-child(even) {
-  padding-left :10px;
+.horizontal-line {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  border-bottom:1px solid lightgrey;
 }
 
 .menu-item__image {
@@ -290,6 +359,46 @@ background: #016391;
 .menu-item__size { 
   background: black;
   color : white;
+  padding: 3px 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .4px;
+}
+
+.menu-item__name {
+  text-indent:4px;
+}
+
+.menu-item__size {
+  text-indent:1px;
+}
+.menu-item__selectbox {
+  background-color:black;
+  color:white;
+  width: 85%;
+  letter-spacing: -1px;
+  font-weight: 600;
+  font-size:12px;
+}
+
+.fa-info.my-pizza-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.my-pizza-icon{
+  border:2px solid #fff;
+  float: right;
+  margin: 5px 5px 0 0;
+}
+
+.menu-item__customise,
+.menu-item__add {
+  height: 37px;
+  text-align: center;
+  line-height: 2.1;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .menu-item__customise {
@@ -301,6 +410,41 @@ background: #016391;
   background: #5B782A;
   color : white;
 }
+
+.section-wrapper {
+  display: flex;
+  align-items: center;
+  margin:25px 0 -15px 0;
+  width: 100%;
+}
+
+.section-wrapper__header {
+  color: #e31837;
+}
+
+.fa-affiliatetheme {
+  margin:0 5px;
+  color:#e31837;
+}
+
+.fa-affiliatetheme.first{
+  transform:rotate(0deg);
+  margin-left: 4.5%;
+}
+
+.fa-affiliatetheme.second{
+  transform : rotate(180deg);
+}
+
+hr {
+  border:1px solid #016391;;
+  width: 15%;
+  margin:0 5px;
+}
+
+
+
+
 
 
 
