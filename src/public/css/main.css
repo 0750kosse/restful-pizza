@@ -326,7 +326,6 @@ color: black;
   flex-flow: row wrap;
   justify-content: space-between;
   background-color: #fff;
-  margin-top: -15px;
 }
 
 .menu-item{
@@ -442,7 +441,7 @@ color: black;
 
 hr {
   border:1px solid #016391;;
-  width: 25%;
+  width: 22%;
 }
 
 .menu-item__name.sides {
@@ -471,6 +470,112 @@ padding:0;
   color: #302e2e;
   border-right:1px solid lightgrey;
 }
+
+/* FOOTER */
+
+.footer-wrapper {
+  margin-top: 38%;
+  text-align: center;
+}
+
+.footer-section {
+  background-color: #e5e5e5;
+  border:1px solid lightgrey;
+  padding: 8px;
+  color: #016391;
+  letter-spacing: -0.5px;
+}
+
+.footer-section.follow{
+  border :none;
+}
+
+.fa-angle-down {
+  float: right;
+  margin-right: 10px;
+}
+
+i.arrow {
+  line-height: 1.6;
+  color: #e31837;
+}
+
+.footer-section__links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-top: 15px;
+  font-size: 16px;
+  color:#016391;
+}
+
+.footer-section__links > p {
+  padding: 0 10px;
+  border-right: 1px solid black;
+}
+
+.footer-section__copyright {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.footer-section__links,
+.footer-section__copyright {
+  color:#016391;
+}
+
+/* BACKGROUND IMAGES */
+
+/* SIDES */
+.menu-item__image.dippers {
+  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Side/256x256/1907-SID-Garlic-Dippers.jpg?v=2fe77e326ab1c62215f148e77ca028cf');
+}
+.menu-item__image.garlic {
+background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Side/256x256/1907-SID-Garlic-Pizza.jpg?v=fc9998be5ccfdd747f58d17afb3a8016');
+}
+
+.menu-item__image.potato {
+  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Side/256x256/1907-SID-Potato-Wedges.jpg?v=5929897e0e3769500673e1d0d0c7d87e');
+}
+.menu-item__image.dough {
+  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Side/256x256/1907-SID-Twisted-Doughballs-Pepperoni.jpg?v=048974218c4e3fff40bb87de0cba0f79')
+}
+
+/* DESSERTS */
+
+.menu-item__image.cookies {
+  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Dessert/256x256/1907-DES-Cookies.jpg?v=1efc9d35e0cabcf52ebfbd8880d51035');
+}
+
+.menu-item__image.vanilla {
+  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Dessert/256x256/1907-DES-BJ-Caramel-Chew-Chew.jpg?v=fa1339fbb63f08c1c398bd86042f4bb9');
+}
+
+.menu-item__image.mint {
+  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Dessert/256x256/1907-DES-BJ-Birthday-Cake.jpg?v=d9647cdcd894c61df06ebd10d63daf49');
+}
+
+.menu-item__image.magnum{
+  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Dessert/256x256/1907-DES-Magnum-White-Tub.jpg?v=0b8063a529e94f408590252d922b5312');
+}
+
+/* DRINKS */
+
+.menu-item__image.water {
+background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drink/256x256/1907-DRI-Smartwater-600ml.jpg?v=848559acf4043eac890c55f6ac133185');
+}
+
+.menu-item__image.diet {
+  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drink/256x256/1907-DRI-Diet-Coke.jpg?v=fce7fa38e90d557fbbfb3eec2d673c94');
+}
+.menu-item__image.classic {
+  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drink/256x256/1907-DRI-Coca-Cola.jpg?v=a9e504fd285586b57497e49a1eb90775');
+}
+
+.menu-item__image.fanta {
+  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drink/256x256/1907-DRI-Fanta-Orange.jpg?v=c7cdeca16d5eb8312d4219a516c285f8');
+}
+
 
 
 
