@@ -117,6 +117,10 @@ ul li ul li {
   font-stretch: condensed;
 }
 
+.submenu-heading__main--collect {
+  display: none;
+}
+
 .submenu-heading__main--menu,
 .submenu-heading__main--deals {
 width: 40%;
@@ -132,6 +136,7 @@ width: 40%;
 
 .submenu-heading__main--basket {
 background: #016391;
+width: 20%;
 }
 
 .submenu-heading__main,
@@ -170,11 +175,16 @@ background: #016391;
 }
 
 /* PERSONALISE MENU */
+
+.section-wrapper__ipad {
+  display: none;
+}
+
 .personalise-menu {
   display: flex;
+  flex-flow: row wrap;
   font-weight: 600;
   width: 100%;
-  height: 59px;
 }
 
 .personalise-menu-own,
@@ -183,17 +193,17 @@ background: #016391;
   padding:10px;
   text-align: center;
   line-height: 1.9;
-  width: 50%;
+  height: 37px;
+  width: 43.7%;
 }
 
 .personalise-menu-own {
-  border-right:1px solid #fff;
   background: #016391;
-}
+  }
 
 .personalise-menu-half {
   background: #e31837;
-}
+  }
 
 /* PIZZA LEGEND */
 
@@ -420,6 +430,7 @@ color: black;
   width: 100%;
 }
 
+
 .section-wrapper__header {
   color: #e31837;
 }
@@ -576,7 +587,61 @@ background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drin
   background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drink/256x256/1907-DRI-Fanta-Orange.jpg?v=c7cdeca16d5eb8312d4219a516c285f8');
 }
 
+@media only screen and (min-width: 768px) and (max-width: 979px) {
 
+  .submenu-heading__main--collect {
+    display: inline;
+    background-color : #016391;
+  }
+
+  .submenu-heading__main--collect,
+  .submenu-heading__main--basket {
+    width: 30%;
+  }
+
+  .submenu-heading__main--menu,
+  .submenu-heading__main--deals {
+    width: 20%;
+  }
+
+  .promotion-picture {
+    width: 100%;
+    height: 10rem;
+  }
+
+/* PROMOTIONS */
+
+/* PERSONALIZE MENU */
+ .section-wrapper__ipad {
+   display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:25px 0 -15px 0;
+    width: 100%;
+  }
+/* PIZZA LEGEND */
+
+/* SYMBOL SECTION */
+
+
+/* MAIN CONTENT */
+  .horizontal-line {
+    display: none;
+  }
+  
+ .menu {
+   margin : 0 20px;
+ }
+  .menu-item {
+  width: 31%;
+  
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+    
+    }
+  
 
 
 
