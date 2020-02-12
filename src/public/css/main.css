@@ -1,7 +1,8 @@
 * {
   margin : 0;
   border : 0;
-  padding : 0
+  padding : 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -134,9 +135,16 @@ width: 40%;
   background: #00aaf7;
 }
 
+.fa-angle-right {
+  vertical-align: -15% !important;
+}
+
 .submenu-heading__main--basket {
+display: flex;
+flex-flow: column;
 background: #016391;
 width: 20%;
+font-size: 18px;
 }
 
 .submenu-heading__main,
@@ -166,7 +174,13 @@ width: 20%;
   border-right: 1px solid lightgrey;
   width: 25%;;
 }
-
+.basket-amount {
+  font-size: 15px;
+  line-height: 20px;
+}
+.fa-shopping-basket {
+  margin : 5px 0;
+}
 /* PICTURE SECTION */
 
 .promotion-picture {
@@ -205,6 +219,10 @@ width: 20%;
   background: #e31837;
   }
 
+.personalise-menu-own.ipad,
+.personalise-menu-half.ipad {
+  display: none;
+}
 /* PIZZA LEGEND */
 
 .pizza-legend {
@@ -243,6 +261,10 @@ width: 20%;
   padding: 10px;
   letter-spacing: -1px;
   font-weight: 600;
+}
+
+.pizza-legend.ipad {
+  display: none;
 }
 
 /* SYMBOL SECTION */
@@ -618,6 +640,23 @@ background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drin
     align-items: center;
     margin:25px 0 -15px 0;
     width: 100%;
+  }
+
+  
+
+  .personalise-menu-own,
+  .personalise-menu-half,
+  .pizza-legend {
+    display: none;
+  }
+
+  .personalise-menu-own.ipad,
+  .personalise-menu-half.ipad,
+  .pizza-legend.ipad {
+    display: flex;
+    flex-flow: column;
+    width: 30%;
+    height: 100px;
   }
 /* PIZZA LEGEND */
 
