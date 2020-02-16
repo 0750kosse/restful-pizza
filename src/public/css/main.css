@@ -190,7 +190,8 @@ font-size: 18px;
 
 /* PERSONALISE MENU */
 
-.section-wrapper__ipad {
+.section-wrapper__ipad,
+.section-wrapper__items {
   display: none;
 }
 
@@ -213,11 +214,11 @@ font-size: 18px;
 
 .personalise-menu-own {
   background: #016391;
-  }
+}
 
 .personalise-menu-half {
   background: #e31837;
-  }
+}
 
 .personalise-menu-own.ipad,
 .personalise-menu-half.ipad {
@@ -263,12 +264,13 @@ font-size: 18px;
   font-weight: 600;
 }
 
-.pizza-legend.ipad {
+.pizza-legend__ipad {
   display: none;
 }
 
 /* SYMBOL SECTION */
-.symbol-section {
+.symbol-section,
+.symbol-section.ipad {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
@@ -635,14 +637,19 @@ background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drin
 
 /* PERSONALIZE MENU */
  .section-wrapper__ipad {
-   display: flex;
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin:25px 0 -15px 0;
+    margin:10px 0 25px 0;
     width: 100%;
   }
 
-  
+  .section-wrapper__items {
+    display: flex;
+    flex-flow : row nowrap;
+    justify-content: space-between;
+    margin: 0 20px;
+  }
 
   .personalise-menu-own,
   .personalise-menu-half,
@@ -650,36 +657,108 @@ background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drin
     display: none;
   }
 
-  .personalise-menu-own.ipad,
+  .personalise-menu.ipad,
   .personalise-menu-half.ipad,
   .pizza-legend.ipad {
     display: flex;
     flex-flow: column;
-    width: 30%;
-    height: 100px;
+    width: 31%;
+  } 
+
+  .personalise-menu.description-own,
+  .personalise-menu.description-half,
+  .pizza-legend.description {
+    overflow-y: hidden;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 10px 20px 5px 0px;
+    color: #fff;
   }
-/* PIZZA LEGEND */
 
-/* SYMBOL SECTION */
+  .personalise-menu.footer {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+  }
 
+  .personalise-menu.footer.own,
+  .personalise-menu.footer.half {
+    justify-content: space-between;
+  }
 
-/* MAIN CONTENT */
+  .personalise-menu.description-own,
+  .personalise-menu.footer.own {
+    background-color: #016391;
+  }
+
+  .personalise-menu.description-half,
+  .personalise-menu.footer.half {
+    background-color: red;
+    font-size: 14px;
+    letter-spacing: 1px;
+    }
+
+  .personalise-menu.description-half.legend,
+  .personalise-menu.footer.half.legend {
+    border: 1px solid #00aaf7;
+    background: #e8f5fd;
+    color : #1893CC;
+    border-bottom : transparent;
+  }
+    
+  .personalise-menu.price,
+  .personalise-menu.clickable {
+    padding: 5px 0;
+    justify-content: space-between;
+    font-size : 17px;
+    letter-spacing: -.5px;
+    width: 31%;
+  }
+
+  .personalise-menu.price {
+    background-color: black;
+    color : #fff;
+  }
+
+  .personalise-menu.clickable {
+    background: #5B782A;
+    color : #fff;
+    padding-left: 10px;
+  }
+    
+  .pizza-legend__id.ipad {
+    margin-left: 0;
+    width: 62.7%;
+  }
+    
+  /* PIZZA LEGEND */
+
+  /* SYMBOL SECTION */
+  .section-wrapper__ipad.specialty {
+    margin-top: 15px;
+    margin-bottom: -10px;
+  }
+
+    
+  /* MAIN CONTENT */
   .horizontal-line {
     display: none;
   }
-  
- .menu {
+  .menu {
    margin : 0 20px;
- }
+  }
   .menu-item {
   width: 31%;
-  
   }
 }
 
+
+
 @media only screen and (min-width: 1024px) and (max-width: 1199px) {
-    
-    }
+  
+}
   
 
 
