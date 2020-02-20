@@ -36,11 +36,13 @@
     alt="Two for Tuesday Offer">
 </picture>
 <div class="personalise-menu">
-  <div class="personalise-menu-own">Create Your Own
-    <i class="fas fa-angle-right"></i>
-  </div>
-  <div class="personalise-menu-half">Half and Half
-    <i class="fas fa-angle-right"></i>
+  <div class="personalise-menu__div">
+    <div class="personalise-menu-own">Create Your Own
+      <i class="fas fa-angle-right"></i>
+    </div>
+    <div class="personalise-menu-half">Half and Half
+      <i class="fas fa-angle-right"></i>
+    </div>
   </div>
   <div class="pizza-legend">
     <img class="pizza-legend__img" src="https://www.pizzalegends.co.uk/assets/2000392/thumb.png" alt="">
@@ -71,7 +73,7 @@
   <div class="personalise-menu ipad">
     <p class="personalise-menu description-half legend"><br>HAVE A <br>PIZZA LEGEND ID?<br> ENTER IT BELOW</p>
     <div class="personalise-menu footer half legend">
-      <form action="">
+      <form action="" class="pizza-legend__form ipad">
         <input type="text" class="pizza-legend__id ipad" value="ENTER YOUR ID"></input>
         <input type="submit" class="pizza-legend__submit ipad" value="GET IT"></input>
       </form>
@@ -297,18 +299,18 @@
     <div class="menu-item__image cookies">
       <i class="fas fa-info fa-sm my-pizza-icon"></i>
     </div>
-    <div class="menu">
-      <div class="menu-item__name sides">Chocolate Cookies</div>
-      <div class="menu-item__size sides">
-        <span class="menu-item__price sides">£1.99</span>
-        <select class="menu-item__selectbox sides">
-          <option value="one">1</option>
-          <option value="two">2</option>
-          <option value="three">3</option>
-          <option value="four">4</option>
-        </select>
-      </div>
-      <div class="menu-item__add">ADD TO BASKET</div>
+
+    <div class="menu-item__name sides">Chocolate Cookies</div>
+    <div class="menu-item__size sides">
+      <span class="menu-item__price sides">£1.99</span>
+      <select class="menu-item__selectbox sides">
+        <option value="one">1</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+        <option value="four">4</option>
+      </select>
+    </div>
+    <div class="menu-item__add">ADD TO BASKET</div>
   </article>
   <article class="menu-item">
     <div class="menu-item__image vanilla">
