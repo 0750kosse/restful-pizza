@@ -196,7 +196,7 @@ ul li ul li {
 
 /* PERSONALISE MENU */
 
-.section-wrapper__ipad,
+.section-wrapper.ipad,
 .section-wrapper__items {
   display: none;
 }
@@ -300,15 +300,15 @@ ul li ul li {
 .symbol-section__icon-veggie,
 .symbol-section__icon-gluten,
 .symbol-section__icon-hot {
-    margin-right: 5px;
-    background-color: green;
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
-    text-align: center;
-    line-height: 1.8;
-    color: white;
-    font-weight: 700;
+  margin-right: 5px;
+  background-color: green;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  line-height: 1.8;
+  color: white;
+  font-weight: 700;
 }
 
 .symbol-section__icon-gluten {
@@ -595,7 +595,7 @@ i.arrow {
 /* PROMOTIONS */
 
 /* PERSONALIZE MENU */
- .section-wrapper__ipad {
+ .section-wrapper.ipad {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -667,8 +667,6 @@ i.arrow {
     border-bottom : transparent;
   }
 
-  
-
   .personalise-menu.price,
   .personalise-menu.clickable {
     padding: 5px 0;
@@ -698,7 +696,7 @@ i.arrow {
     width: 61.5%;
   }
   /* SYMBOL SECTION */
-  .section-wrapper__ipad.specialty {
+  .section-wrapper.ipad.specialty {
     margin-top: 15px;
     margin-bottom: -10px;
   }
@@ -736,7 +734,7 @@ i.arrow {
     height: 15rem;
   }
 
-  .section-wrapper__ipad {
+  .section-wrapper.ipad {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -838,7 +836,7 @@ i.arrow {
     width: 71%;
   }
   /* SYMBOL SECTION */
-  .section-wrapper__ipad.specialty {
+  .section-wrapper.ipad.specialty {
     margin-top: 15px;
     margin-bottom: -10px;
   }
@@ -882,13 +880,24 @@ i.arrow {
     width: 50%;
   }
 
+  .menu-item__add.ipad {
+    margin-top: 0;
+  }
+
   .menu-item__price.sides,
   .menu-item__selectbox.sides {
     width: 20%;
   }
-  
+
   .menu-item__selectbox.sides {
-    margin-left: 0;
+    margin-left: 10px;
+  }
+
+  .menu-item__add {
+    width: 50%;
+    float: right;
+    margin-top: -38px;
+    font-size : 16px;
   }
 
   .footer-wrapper {
