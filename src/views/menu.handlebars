@@ -112,12 +112,14 @@
     <p class="symbol-section__text hot-spicy">Hot & Spicy</p>
   </div>
 </div>
+
 <div class="menu">
+  {{#each item}}
   <article class="menu-item">
     <div class="menu-item__image">
       <i class="fas fa-info fa-sm my-pizza-icon"></i>
     </div>
-    <div class="menu-item__name">Carbonara</div>
+    <div class="menu-item__name" id="item__name">{{name}}</div>
     <div class="menu-item__size">
       <select class="menu-item__selectbox">
         <option value="large">Large 13.5" £17.99</option>
@@ -132,66 +134,11 @@
       <div class="menu-item__add ipad">ADD TO BASKET</div>
     </div>
   </article>
-  <article class="menu-item">
-    <div class="menu-item__image">
-      <i class="fas fa-info fa-sm my-pizza-icon"></i>
-    </div>
-    <div class="menu-item__name">Tuna</div>
-    <div class="menu-item__size">
-      <select class="menu-item__selectbox">
-        <option value="large">Large 13.5" £17.99</option>
-        <option value="medium">Medium 11.5" £14.99</option>
-        <option value="small">Small 9.5" £10.99</option>
-        <option value="personal">Personal 7" £7.99</option>
-      </select>
-      <i class="fas fa-caret-down"></i>
-    </div>
-    <div class="menu-item__ipad">
-      <div class="menu-item__customise ipad">CUSTOMISE</div>
-      <div class="menu-item__add ipad">ADD TO BASKET</div>
-    </div>
-  </article>
-  <div class="horizontal-line"></div>
-  <article class="menu-item">
-    <div class="menu-item__image">
-      <i class="fas fa-info fa-sm my-pizza-icon"></i>
-    </div>
-    <div class="menu-item__name">Deliciosa</div>
-    <div class="menu-item__size">
-      <select class="menu-item__selectbox">
-        <option value="large">Large 13.5" £17.99</option>
-        <option value="medium">Medium 11.5" £14.99</option>
-        <option value="small">Small 9.5" £10.99</option>
-        <option value="personal">Personal 7" £7.99</option>
-      </select>
-      <i class="fas fa-caret-down"></i>
-    </div>
-    <div class="menu-item__ipad">
-      <div class="menu-item__customise ipad">CUSTOMISE</div>
-      <div class="menu-item__add ipad">ADD TO BASKET</div>
-    </div>
-  </article>
-  <article class="menu-item">
-    <div class="menu-item__image">
-      <i class="fas fa-info fa-sm my-pizza-icon"></i>
-    </div>
-    <div class="menu-item__name">Piña</div>
-    <div class="menu-item__size">
-      <select class="menu-item__selectbox">
-        <option value="large">Large 13.5" £17.99</option>
-        <option value="medium">Medium 11.5" £14.99</option>
-        <option value="small">Small 9.5" £10.99</option>
-        <option value="personal">Personal 7" £7.99</option>
-      </select>
-    </div>
-    <div class="menu-item__ipad">
-      <div class="menu-item__customise ipad">CUSTOMISE</div>
-      <div class="menu-item__add ipad">ADD TO BASKET</div>
-    </div>
-  </article>
+  {{/each}}
   <div class="horizontal-line"></div>
 </div>
 <!-- SIDE SECTION -->
+
 <div class="section-wrapper ipad">
   <i class="fab fa-affiliatetheme first"></i>
   <hr>
@@ -213,6 +160,7 @@
     <p class="symbol-section__text hot-spicy">Hot & Spicy</p>
   </div>
 </div>
+<!--
 <div class="menu">
   <article class="menu-item">
     <div class="menu-item__image dippers">
@@ -230,55 +178,7 @@
     </div>
     <div class="menu-item__add">ADD TO BASKET</div>
   </article>
-  <article class="menu-item">
-    <div class="menu-item__image potato">
-      <i class="fas fa-info fa-sm my-pizza-icon"></i>
-    </div>
-    <div class="menu-item__name sides">Potato Wedgers</div>
-    <div class="menu-item__size sides">
-      <span class="menu-item__price sides">£5.99</span>
-      <select class="menu-item__selectbox sides">
-        <option value="one">1</option>
-        <option value="two">2</option>
-        <option value="three">3</option>
-        <option value="four">4</option>
-      </select>
-    </div>
-    <div class="menu-item__add">ADD TO BASKET</div>
-  </article>
-  <div class="horizontal-line"></div>
-  <article class="menu-item">
-    <div class="menu-item__image garlic">
-      <i class="fas fa-info fa-sm my-pizza-icon"></i>
-    </div>
-    <div class="menu-item__name sides">Garlic Pizza Bread</div>
-    <div class="menu-item__size sides">
-      <span class="menu-item__price sides">£1.99</span>
-      <select class="menu-item__selectbox sides">
-        <option value="one">1</option>
-        <option value="two">2</option>
-        <option value="three">3</option>
-        <option value="four">4</option>
-      </select>
-    </div>
-    <div class="menu-item__add">ADD TO BASKET</div>
-  </article>
-  <article class="menu-item">
-    <div class="menu-item__image dough">
-      <i class="fas fa-info fa-sm my-pizza-icon"></i>
-    </div>
-    <div class="menu-item__name sides">Dough Balls</div>
-    <div class="menu-item__size sides">
-      <span class="menu-item__price sides">£2.99</span>
-      <select class="menu-item__selectbox sides">
-        <option value="one">1</option>
-        <option value="two">2</option>
-        <option value="three">3</option>
-        <option value="four">4</option>
-      </select>
-    </div>
-    <div class="menu-item__add">ADD TO BASKET</div>
-  </article>
+  
   <div class="horizontal-line"></div>
 </div>
 <!-- DESSERT SECTION -->
