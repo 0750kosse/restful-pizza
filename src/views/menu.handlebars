@@ -112,9 +112,8 @@
     <p class="symbol-section__text hot-spicy">Hot & Spicy</p>
   </div>
 </div>
-
 <div class="menu">
-  {{#each item}}
+  {{#each pizzaCat}}
   <article class="menu-item">
     <div class="menu-item__image">
       <i class="fas fa-info fa-sm my-pizza-icon"></i>
@@ -138,7 +137,6 @@
   <div class="horizontal-line"></div>
 </div>
 <!-- SIDE SECTION -->
-
 <div class="section-wrapper ipad">
   <i class="fab fa-affiliatetheme first"></i>
   <hr>
@@ -160,15 +158,15 @@
     <p class="symbol-section__text hot-spicy">Hot & Spicy</p>
   </div>
 </div>
-<!--
 <div class="menu">
+  {{#each sidesCat}}
   <article class="menu-item">
     <div class="menu-item__image dippers">
       <i class="fas fa-info fa-sm my-pizza-icon"></i>
     </div>
-    <div class="menu-item__name sides">Garlic Dippers</div>
+    <div class="menu-item__name sides">{{name}}</div>
     <div class="menu-item__size sides">
-      <span class="menu-item__price sides">£3.99</span>
+      <span class="menu-item__price sides">£ {{price}}</span>
       <select class="menu-item__selectbox sides">
         <option value="one">1</option>
         <option value="two">2</option>
@@ -178,7 +176,7 @@
     </div>
     <div class="menu-item__add">ADD TO BASKET</div>
   </article>
-  
+  {{/each}}
   <div class="horizontal-line"></div>
 </div>
 <!-- DESSERT SECTION -->
@@ -204,13 +202,14 @@
   </div>
 </div>
 <div class="menu">
+  {{#each dessertsCat}}
   <article class="menu-item">
     <div class="menu-item__image cookies">
       <i class="fas fa-info fa-sm my-pizza-icon"></i>
     </div>
-    <div class="menu-item__name sides">Chocolate Cookies</div>
+    <div class="menu-item__name sides">{{name}}</div>
     <div class="menu-item__size sides">
-      <span class="menu-item__price sides">£1.99</span>
+      <span class="menu-item__price sides">£ {{price}}</span>
       <select class="menu-item__selectbox sides">
         <option value="one">1</option>
         <option value="two">2</option>
@@ -220,55 +219,7 @@
     </div>
     <div class="menu-item__add">ADD TO BASKET</div>
   </article>
-  <article class="menu-item">
-    <div class="menu-item__image vanilla">
-      <i class="fas fa-info fa-sm my-pizza-icon"></i>
-    </div>
-    <div class="menu-item__name sides">Vanilla Ice Cream</div>
-    <div class="menu-item__size sides">
-      <span class="menu-item__price sides">£2.99</span>
-      <select class="menu-item__selectbox sides">
-        <option value="one">1</option>
-        <option value="two">2</option>
-        <option value="three">3</option>
-        <option value="four">4</option>
-      </select>
-    </div>
-    <div class="menu-item__add">ADD TO BASKET</div>
-  </article>
-  <div class="horizontal-line"></div>
-  <article class="menu-item">
-    <div class="menu-item__image mint">
-      <i class="fas fa-info fa-sm my-pizza-icon"></i>
-    </div>
-    <div class="menu-item__name sides">Mint Ice Cream</div>
-    <div class="menu-item__size sides">
-      <span class="menu-item__price sides">£3.99</span>
-      <select class="menu-item__selectbox sides">
-        <option value="one">1</option>
-        <option value="two">2</option>
-        <option value="three">3</option>
-        <option value="four">4</option>
-      </select>
-    </div>
-    <div class="menu-item__add">ADD TO BASKET</div>
-  </article>
-  <article class="menu-item">
-    <div class="menu-item__image magnum">
-      <i class="fas fa-info fa-sm my-pizza-icon"></i>
-    </div>
-    <div class="menu-item__name sides">Magnum Tub</div>
-    <div class="menu-item__size sides">
-      <span class="menu-item__price sides">£4.99</span>
-      <select class="menu-item__selectbox sides">
-        <option value="one">1</option>
-        <option value="two">2</option>
-        <option value="three">3</option>
-        <option value="four">4</option>
-      </select>
-    </div>
-    <div class="menu-item__add">ADD TO BASKET</div>
-  </article>
+  {{/each}}
   <div class="horizontal-line"></div>
 </div>
 <!-- DRINKS SECTION -->
@@ -294,13 +245,14 @@
   </div>
 </div>
 <div class="menu">
+  {{#each drinksCat}}
   <article class="menu-item">
     <div class="menu-item__image water">
       <i class="fas fa-info fa-sm my-pizza-icon"></i>
     </div>
-    <div class="menu-item__name sides">Still Water</div>
+    <div class="menu-item__name sides">{{name}}</div>
     <div class="menu-item__size sides">
-      <span class="menu-item__price sides">£1.99</span>
+      <span class="menu-item__price sides">£{{price}}</span>
       <select class="menu-item__selectbox sides">
         <option value="one">1</option>
         <option value="two">2</option>
@@ -310,55 +262,7 @@
     </div>
     <div class="menu-item__add">ADD TO BASKET</div>
   </article>
-  <article class="menu-item">
-    <div class="menu-item__image diet">
-      <i class="fas fa-info fa-sm my-pizza-icon"></i>
-    </div>
-    <div class="menu-item__name sides">Diet Coke</div>
-    <div class="menu-item__size sides">
-      <span class="menu-item__price sides">£2.99</span>
-      <select class="menu-item__selectbox sides">
-        <option value="one">1</option>
-        <option value="two">2</option>
-        <option value="three">3</option>
-        <option value="four">4</option>
-      </select>
-    </div>
-    <div class="menu-item__add">ADD TO BASKET</div>
-  </article>
-  <div class="horizontal-line"></div>
-  <article class="menu-item">
-    <div class="menu-item__image fanta">
-      <i class="fas fa-info fa-sm my-pizza-icon"></i>
-    </div>
-    <div class="menu-item__name sides">Orange Juice</div>
-    <div class="menu-item__size sides">
-      <span class="menu-item__price sides">£3.99</span>
-      <select class="menu-item__selectbox sides">
-        <option value="one">1</option>
-        <option value="two">2</option>
-        <option value="three">3</option>
-        <option value="four">4</option>
-      </select>
-    </div>
-    <div class="menu-item__add">ADD TO BASKET</div>
-  </article>
-  <article class="menu-item">
-    <div class="menu-item__image classic">
-      <i class="fas fa-info fa-sm my-pizza-icon"></i>
-    </div>
-    <div class="menu-item__name sides">Classic Coke</div>
-    <div class="menu-item__size sides">
-      <span class="menu-item__price sides">£4.99</span>
-      <select class="menu-item__selectbox sides">
-        <option value="one">1</option>
-        <option value="two">2</option>
-        <option value="three">3</option>
-        <option value="four">4</option>
-      </select>
-    </div>
-    <div class="menu-item__add">ADD TO BASKET</div>
-  </article>
+  {{/each}}
   <div class="horizontal-line"></div>
 </div>
 <footer class="footer-wrapper">

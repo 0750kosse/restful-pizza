@@ -16,7 +16,11 @@ function getHome(req, res, next) {
 
 async function getMenu(req, res, next) {
   let productList = await fetchData();
-  res.render('menu', { item: productList });
+  let pizzas = productList.filter((item) => item.category === "Pizza");
+  let sides = productList.filter((item) => item.category === "Sides");
+  let desserts = productList.filter((item) => item.category === "Desserts");
+  let drinks = productList.filter((item) => item.category === "Bebidas");
+  res.render('menu', { pizzaCat: pizzas, sidesCat: sides, dessertsCat: desserts, drinksCat: drinks });
 }
 
 function getOrder(req, res, next) {
