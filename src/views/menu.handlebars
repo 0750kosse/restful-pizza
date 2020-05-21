@@ -24,12 +24,11 @@
       <span class="basket-amount">$0.00</span>
     </div>
   </div>
-
   <div class="submenu-heading__secondary">
-    <div class="submenu-heading__main--pizza">Pizza</div>
-    <div class="submenu-heading__main--sides">Sides</div>
-    <div class="submenu-heading__main--desserts">Desserts</div>
-    <div class="submenu-heading__main--drinks">Drinks</div>
+    <a href="#pizza-section" class="submenu-heading__main--pizza">Pizza</a>
+    <a href="#sides-section" class="submenu-heading__main--sides">Sides</a>
+    <a href="#desserts-section" class="submenu-heading__main--desserts">Desserts</a>
+    <a href="#drinks-section" class="submenu-heading__main--drinks">Drinks</a>
   </div>
 </div>
 <picture class="promotions">
@@ -93,7 +92,7 @@
 <div class="section-wrapper ipad specialty">
   <i class="fab fa-affiliatetheme first"></i>
   <hr>
-  <h2 class="section-wrapper__header">SPECIALTY PIZZAS</h2>
+  <h2 class="section-wrapper__header" id="pizza-section">SPECIALTY PIZZAS</h2>
   <hr>
   <i class="fab fa-affiliatetheme second"></i>
 </div>
@@ -121,16 +120,18 @@
     <div class="menu-item__name" id="item__name">{{name}}</div>
     <div class="menu-item__size">
       <select class="menu-item__selectbox">
-        <option value="large">Large 13.5" £17.99</option>
-        <option value="medium">Medium 11.5" £14.99</option>
-        <option value="small">Small 9.5" £10.99</option>
         <option value="personal">Personal 7" £7.99</option>
+        <option value="small">Small 9.5" £10.99</option>
+        <option value="medium">Medium 11.5" £14.99</option>
+        <option value="large">Large 13.5" £17.99</option>
       </select>
       <i class="fas fa-caret-down"></i>
     </div>
     <div class="menu-item__ipad">
       <div class="menu-item__customise ipad">CUSTOMISE</div>
-      <div class="menu-item__add ipad">ADD TO BASKET</div>
+      <div>
+        <button class="menu-item__add ipad">ADD TO BASKET</button>
+      </div>
     </div>
   </article>
   {{/each}}
@@ -140,7 +141,7 @@
 <div class="section-wrapper ipad">
   <i class="fab fa-affiliatetheme first"></i>
   <hr>
-  <h2 class="section-wrapper__header">SIDES</h2>
+  <h2 class="section-wrapper__header" id="sides-section">SIDES</h2>
   <hr>
   <i class="fab fa-affiliatetheme second"></i>
 </div>
@@ -183,7 +184,7 @@
 <div class="section-wrapper ipad">
   <i class="fab fa-affiliatetheme first"></i>
   <hr>
-  <h2 class="section-wrapper__header">DESSERTS</h2>
+  <h2 class="section-wrapper__header" id="desserts-section">DESSERTS</h2>
   <hr>
   <i class="fab fa-affiliatetheme second"></i>
 </div>
@@ -226,7 +227,7 @@
 <div class="section-wrapper ipad">
   <i class="fab fa-affiliatetheme first"></i>
   <hr>
-  <h2 class="section-wrapper__header">DRINKS</h2>
+  <h2 class="section-wrapper__header" id="drinks-section">DRINKS</h2>
   <hr>
   <i class="fab fa-affiliatetheme second"></i>
 </div>
