@@ -1108,6 +1108,62 @@ background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drin
 }
   
 
+/* BUTTONS STYLES */
+.btn {
+  text-align: center;
+  vertical-align: middle;
+  padding: .67em .67em;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-primary {
+  color: white;
+  
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+}
+.sum {
+  background-color: lawngreen;
+}
+
+.rest {
+  background-color: red;
+  
+}
+
+/* ORDER PAGE STYLES */
+
+.basket-container {
+  margin-top : 30%;
+}
+.basket-summary__text,
+.basket-buttons {
+  margin-left : 5%;
+}
+
+.basket-item {
+  display: flex;
+  margin : 5% 5% 0 5%;
+  height: 100px;
+  width: auto;
+  padding-bottom:2%;
+  border-bottom:1px solid lightgrey;
+}
+
+.basket-item__image {
+  width: 50%;
+  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Side/256x256/1907-SID-Garlic-Dippers.jpg?v=2fe77e326ab1c62215f148e77ca028cf');
+  background-size: 65%;
+  background-repeat: no-repeat;
+}
+
+.basket-buttons {
+  justify-content: space-evenly;
+}
+
+
 
 
 
