@@ -32,8 +32,12 @@ function getContact(req, res, next) {
 }
 
 function postBasket(req, res, next) {
-  console.log("this is a post the pizza mate")
-  res.send('Success, basket works')
+  const item = {
+    name: req.body.name,
+    quantity: 1
+  }
+  console.log(item)
+  res.send({ basket: { item } })
 }
 
 router.get(paths.home, getHome);
