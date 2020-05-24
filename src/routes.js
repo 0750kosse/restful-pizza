@@ -31,10 +31,17 @@ function getContact(req, res, next) {
   res.render('contact');
 }
 
+function postBasket(req, res, next) {
+  console.log("this is a post the pizza mate")
+  res.send('Success, basket works')
+}
+
 router.get(paths.home, getHome);
 router.get(paths.menu, getMenu);
 router.get(paths.order, getOrder);
-router.get(paths.contact, getContact)
+router.get(paths.contact, getContact);
+
+router.post(paths.basket, postBasket);
 
 module.exports = router;
 
