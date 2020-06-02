@@ -25,9 +25,14 @@ async function addToBasket(e) {
     body: JSON.stringify({ name: e.target.name })
   });
   const data = await response.json();
-
-  console.log('items numbers', data.basket.length);
+  const orderQty = data.basket.length;
   console.log("RESPONSE: ", JSON.stringify(data, null, 2))
+  updateBasket(orderQty)
 };
+
+function updateBasket(orderQty) {
+  const basketSelector = document.querySelector('.basket-quantity');
+  basketSelector.textContent = orderQty;
+}
 
 onReady(init);

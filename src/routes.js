@@ -32,20 +32,20 @@ function getContact(req, res, next) {
 }
 
 function postBasket(req, res, next) {
+  let newBasket;
+
   const item = {
     name: req.body.name,
     quantity: 1
   }
-
-  let newBasket;
   if (req.session.basket) {
     newBasket = [...req.session.basket, item]
   } else {
     newBasket = [item]
   }
   req.session.basket = newBasket
-  //console.log('basket in session', req.session.basket)
-  res.send({ basket: newBasket })
+  let newBasketQty = newBasket.length;
+  res.send({ basket: newBasket, quantity: newBasketQty })
 }
 
 router.get(paths.home, getHome);

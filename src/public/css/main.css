@@ -190,7 +190,8 @@ ul li ul li {
   color: white;
 }
 
-.basket-amount {
+.basket-amount,
+.basket-quantity {
   font-size: 15px;
   margin: 0 5%;
 }
