@@ -147,11 +147,10 @@ ul li ul li {
 }
 
 .submenu-heading__main--basket {
-  display: flex;
-  flex-flow: column;
   background: #016391;
   width: 20%;
   font-size: 18px;
+  display: block;
 }
 
 .submenu-heading__main,
@@ -193,11 +192,12 @@ ul li ul li {
 
 .basket-amount {
   font-size: 15px;
-  line-height: 20px;
+  margin: 0 5%;
 }
 
 .fa-shopping-basket {
   margin : 5px 0;
+  vertical-align: sub;
 }
 
 /* PICTURE SECTION */
