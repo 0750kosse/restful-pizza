@@ -11,7 +11,7 @@ async function fetchData() {
 }
 
 function getHome(req, res, next) {
-  res.render('home')
+  res.render('home', { title: 'Your pizza place' })
 }
 
 async function getMenu(req, res, next) {
@@ -20,7 +20,7 @@ async function getMenu(req, res, next) {
   let sides = productList.filter((item) => item.category === "Sides");
   let desserts = productList.filter((item) => item.category === "Desserts");
   let drinks = productList.filter((item) => item.category === "Bebidas");
-  res.render('menu', { pizzaCat: pizzas, sidesCat: sides, dessertsCat: desserts, drinksCat: drinks });
+  res.render('menu', { title: 'Your pizza place', pizzaCat: pizzas, sidesCat: sides, dessertsCat: desserts, drinksCat: drinks });
 }
 
 function getOrder(req, res, next) {
@@ -36,8 +36,16 @@ function postBasket(req, res, next) {
     name: req.body.name,
     quantity: 1
   }
-  console.log(item)
-  res.send({ basket: { item } })
+
+  let newBasket;
+  if (req.session.basket) {
+    newBasket = [...req.session.basket, item]
+  } else {
+    newBasket = [item]
+  }
+  req.session.basket = newBasket
+  //console.log('basket in session', req.session.basket)
+  res.send({ basket: newBasket })
 }
 
 router.get(paths.home, getHome);
