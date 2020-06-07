@@ -26,13 +26,15 @@ async function addToBasket(e) {
   });
   const data = await response.json();
   const orderQty = data.basket.length;
-  console.log("RESPONSE: ", JSON.stringify(data, null, 2))
-  updateBasket(orderQty)
+  const price = data.price;
+  console.log("RESPONSE: ", JSON.stringify(data, null, 2), orderQty, price)
+  updateBasket(orderQty, price)
 };
 
-function updateBasket(orderQty) {
-  const basketSelector = document.querySelector('.basket-quantity');
-  basketSelector.textContent = orderQty;
+function updateBasket(orderQty, orderPrice) {
+  console.log("updateBasket", orderQty, orderPrice)
+  document.querySelector('.basket-quantity').textContent = orderQty;
+  document.querySelector('.basket-amount').innerHTML = `£${orderPrice}`;
 }
 
 onReady(init);

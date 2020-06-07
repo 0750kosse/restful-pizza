@@ -21,8 +21,8 @@
     </div>
     <div class="submenu-heading__main--basket">
       <i class="fas fa-shopping-basket"></i>
-      <span class="basket-amount">$0.00</span>
-      <span class="basket-quantity"></span>
+      <span class="basket-amount">£{{total}}</span>
+      <span class="basket-quantity">{{amount}}</span>
     </div>
   </div>
   <div class="submenu-heading__secondary">
@@ -121,12 +121,11 @@
     <div class="menu-item__name" id="item__name">{{name}}</div>
     <div class="menu-item__size">
       <select class="menu-item__selectbox">
-        <option value="personal">Personal 7" £7.99</option>
-        <option value="small">Small 9.5" £10.99</option>
-        <option value="medium">Medium 11.5" £14.99</option>
-        <option value="large">Large 13.5" £17.99</option>
+        <option value="7">Personal £{{price}}</option>
+        <option value="8" selected="selected">Small £{{price}}</option>
+        <option value="9">Medium £{{price}}</option>
+        <option value="10">Large £{{price}}</option>
       </select>
-      <i class="fas fa-caret-down"></i>
     </div>
     <div class="menu-item__ipad">
       <div class="menu-item__customise ipad">CUSTOMISE</div>
@@ -176,7 +175,6 @@
         <option value="four">4</option>
       </select>
     </div>
-
     <div>
       <button class="menu-item__add ipad" name={{name}}>ADD TO BASKET</button>
     </div>
