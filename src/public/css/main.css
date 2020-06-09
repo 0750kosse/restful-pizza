@@ -1131,14 +1131,10 @@ background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drin
 
 .rest {
   background-color: red;
-  
-}
+  }
 
 /* ORDER PAGE STYLES */
 
-.basket-container {
-  margin-top : 30%;
-}
 .basket-summary__text,
 .basket-buttons {
   margin-left : 5%;
@@ -1147,7 +1143,7 @@ background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drin
 .basket-item {
   display: flex;
   margin : 5% 5% 0 5%;
-  height: 100px;
+  height: auto;
   width: auto;
   padding-bottom:2%;
   border-bottom:1px solid lightgrey;

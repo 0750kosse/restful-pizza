@@ -38,36 +38,50 @@ async function getMenuItemByName(name) {
 }
 
 function getOrder(req, res, next) {
-  res.render('order');
+  res.render('order', {
+    basket: req.session.basket,
+    total: req.session.total
+  });
 }
 
 function getContact(req, res, next) {
   res.render('contact');
 }
 
-async function postBasket(req, res, next) {
-  const apiItem = await getMenuItemByName(req.body.name);
-  let newBasket;
+async function addItemToBasket(item, basket = {}) { // Logica de negocio
+  const apiItem = await getMenuItemByName(item);
 
-  const item = await {
-    name: apiItem[0].name,
-    quantity: 1
-  }
-
-  if (req.session.basket) {
-    newBasket = [...req.session.basket, item]
+  if (basket.hasOwnProperty(item)) {
+    basket = {
+      ...basket,
+      [item]: {
+        name: [item],
+        quantity: basket[item].quantity + 1,
+        price: apiItem[0].price,
+        subtotal: (basket[item].quantity + 1) * apiItem[0].price
+      }
+    }
   } else {
-    newBasket = [item]
+    basket[item] = {
+      name: [item],
+      quantity: 1,
+      price: apiItem[0].price,
+      subtotal: apiItem[0].price
+    }
   }
+  basket.totalItems = basket.hasOwnProperty('totalItems') ? basket.totalItems + 1 : 1
+  basket.total = basket.hasOwnProperty('total') ? basket.total + apiItem[0].price : apiItem[0].price
 
-  req.session.basket = newBasket
-  req.session.total = req.session.total ? req.session.total + apiItem[0].price : apiItem[0].price
-  let newBasketQty = newBasket.length;
+  return basket;
+}
 
-  res.send({
+async function postBasket(req, res, next) {
+  const basket = await addItemToBasket(req.body.name, req.session.basket)
+  req.session.basket = basket;
+  return res.send({
     basket: req.session.basket,
-    quantity: newBasketQty,
-    price: req.session.total
+    total: req.session.total,
+    totalOrderQuantity: req.session.totalItems
   })
 }
 

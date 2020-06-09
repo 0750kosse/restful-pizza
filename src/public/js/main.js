@@ -25,14 +25,12 @@ async function addToBasket(e) {
     body: JSON.stringify({ name: e.target.name })
   });
   const data = await response.json();
-  const orderQty = data.basket.length;
-  const price = data.price;
-  console.log("RESPONSE: ", JSON.stringify(data, null, 2), orderQty, price)
+  const orderQty = data.basket.totalItems;
+  const price = data.basket.total;
   updateBasket(orderQty, price)
 };
 
 function updateBasket(orderQty, orderPrice) {
-  console.log("updateBasket", orderQty, orderPrice)
   document.querySelector('.basket-quantity').textContent = orderQty;
   document.querySelector('.basket-amount').innerHTML = `£${orderPrice}`;
 }
