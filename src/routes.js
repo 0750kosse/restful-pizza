@@ -38,9 +38,11 @@ async function getMenuItemByName(name) {
 }
 
 function getOrder(req, res, next) {
+  const { total, totalItems, ...items } = req.session.basket
   res.render('order', {
-    basket: req.session.basket,
-    total: req.session.total
+    total,
+    totalItems,
+    items
   });
 }
 
@@ -48,14 +50,13 @@ function getContact(req, res, next) {
   res.render('contact');
 }
 
-async function addItemToBasket(item, basket = {}) { // Logica de negocio
+async function addItemToBasket(item, basket = {}) {
   const apiItem = await getMenuItemByName(item);
-
   if (basket.hasOwnProperty(item)) {
     basket = {
       ...basket,
       [item]: {
-        name: [item],
+        name: item,
         quantity: basket[item].quantity + 1,
         price: apiItem[0].price,
         subtotal: (basket[item].quantity + 1) * apiItem[0].price
@@ -63,7 +64,7 @@ async function addItemToBasket(item, basket = {}) { // Logica de negocio
     }
   } else {
     basket[item] = {
-      name: [item],
+      name: item,
       quantity: 1,
       price: apiItem[0].price,
       subtotal: apiItem[0].price
@@ -71,7 +72,6 @@ async function addItemToBasket(item, basket = {}) { // Logica de negocio
   }
   basket.totalItems = basket.hasOwnProperty('totalItems') ? basket.totalItems + 1 : 1
   basket.total = basket.hasOwnProperty('total') ? basket.total + apiItem[0].price : apiItem[0].price
-
   return basket;
 }
 

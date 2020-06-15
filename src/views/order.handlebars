@@ -1,27 +1,24 @@
 <div class="basket-container">
-  {{# if basket}}
-  <h3 class="basket-summary__text">Your have {{basket.totalItems}} items on your order : </h3>
-  {{#each basket}}
+  {{# if items}}
+  <h2 class="basket-summary__text">Your have {{totalItems}} items on your order : </h2>
+  {{#each items}}
   <div class="basket-item">
-
     <div class="basket-item__image"></div>
     <div class="basket-item__info">
       <p class="basket-item__name"> Product: {{name}} </p>
       <p class="basket-item__price">£ Subtotal: {{subtotal}}</p>
-      <p class="basket-item__quantity">Quantity: {{quantity}} : </p>
+      <p class="basket-item__quantity">Quantity: {{quantity}}</p>
     </div>
     <div class="basket-buttons">
       <button class="btn btn-primary sum" id="add" onclick="addOne()">+</button>
       <button class="btn btn-primary rest">-</button>
     </div>
-
   </div>
   {{/each}}
-  <p class="basket-total__amount">Total Order: {{basket.total}}</p>
-  <p class="basket-total__qty">Total Order Quantity: {{basket.totalItems}}</p>
+  <h2 class="basket-total__amount">Total Order: {{total}}</h2>
+  <h2 class="basket-total__qty">Total Order Quantity: {{totalItems}}</h2>
   <button class="btn btn-primary rest">Checkout</button>
   {{else}}
-  <p>no products added yet</p>
+  <h2>no products added yet</h2>
   {{/ if}}
-
 </div>
