@@ -131,9 +131,7 @@
     </div>
     <div class="menu-item__ipad">
       <div class="menu-item__customise ipad">CUSTOMISE</div>
-      <div>
-        <button class="menu-item__add ipad" name={{name}}>ADD TO BASKET</button>
-      </div>
+      <button class="menu-item__add ipad" name={{name}}>ADD TO BASKET</button>
     </div>
   </article>
   {{/each}}
@@ -176,8 +174,6 @@
         <option value="three">3</option>
         <option value="four">4</option>
       </select>
-    </div>
-    <div>
       <button class="menu-item__add ipad" name={{name}}>ADD TO BASKET</button>
     </div>
   </article>
@@ -221,8 +217,6 @@
         <option value="three">3</option>
         <option value="four">4</option>
       </select>
-    </div>
-    <div>
       <button class="menu-item__add ipad" name={{name}}>ADD TO BASKET</button>
     </div>
   </article>
@@ -266,8 +260,6 @@
         <option value="three">3</option>
         <option value="four">4</option>
       </select>
-    </div>
-    <div>
       <button class="menu-item__add ipad" name={{name}}>ADD TO BASKET</button>
     </div>
   </article>
@@ -275,9 +267,38 @@
   <div class="horizontal-line"></div>
 </div>
 <footer class="footer-wrapper">
-  <h4 class="footer-section about">About this App<i class="fas fa-angle-down arrow"></i></h4>
-  <h4 class="footer-section corporate">Corporate<i class="fas fa-angle-down arrow"></i></h4>
-  <h4 class="footer-section follow">Follow Us<i class="fas fa-angle-down arrow"></i></h4>
+  <div class="footer-section__featured">
+    <h4 class="footer-section about"><i class="fas fa-angle-down arrow"></i>
+      <input id="check01" type="checkbox" name="About this App" />
+      <label for="check01" class="footer-label">About this App</label>
+      <ul class="dropdown">
+        <li class="dropdown-link">About Us</li>
+        <li class="dropdown-link">Our Vision & Values</li>
+        <li class="dropdown-link">Allergies & Nutritional</li>
+        <li class="dropdown-link">Contact Us</li>
+      </ul>
+    </h4>
+    <h4 class="footer-section corporate"><i class="fas fa-angle-down arrow"></i>
+      <input id="check02" type="checkbox" name="Corporate" />
+      <label for="check02" class="footer-label">Corporate</label>
+      <ul class="dropdown">
+        <li class="dropdown-link">Franchising</li>
+        <li class="dropdown-link">Investor Relations</li>
+        <li class="dropdown-link">Media</li>
+        <li class="dropdown-link">Working For Us</li>
+      </ul>
+    </h4>
+    <h4 class="footer-section follow"><i class="fas fa-angle-down arrow"></i>
+      <input id="check03" type="checkbox" name="Follow Us" />
+      <label for="check03" class="footer-label">Follow Us</label>
+      <ul class="dropdown">
+        <li class="dropdown-link">Facebook logo</li>
+        <li class="dropdown-link">Twitter logo</li>
+        <li class="dropdown-link">Instagram logo</li>
+        <li class="dropdown-link">Other logo</li>
+      </ul>
+    </h4>
+  </div>
   <div class="footer-section__links">
     <p>Stores near me</p>
     <p>Terms of Use</p>
