@@ -1,38 +1,85 @@
-<div class="submenu-heading__main">
-  <div class="submenu-heading__main--collect">COLLECT from...</div>
-  <div class="submenu-heading__main--menu">MENU</div>
-  <div class="submenu-heading__main--deals">DEALS
-    <i class="fas fa-angle-right"></i>
-  </div>
-  <div class="submenu-heading__main--basket">
-    <span class="basket-total">
-      <i class="fas fa-shopping-basket"></i>
-      <span class="basket-amount">£{{total}}</span>
-    </span>
-    <span class="basket-quantity">{{amount}}</span>
+<div class="submenu-heading">
+  <div class="submenu-heading__main">
+    <div class="submenu-heading__main--collect">COLLECT from...</div>
+    <div class="submenu-heading__main--menu">MENU</div>
+    <div class="submenu-heading__main--deals">DEALS
+      <i class="fas fa-angle-right"></i>
+    </div>
+    <div class="submenu-heading__main--basket">
+      <span class="basket-total">
+        <i class="fas fa-shopping-basket"></i>
+        <span class="basket-amount">£{{total}}</span>
+      </span>
+    </div>
   </div>
 </div>
 <div class="basket-container">
   {{# if items}}
-  <h2 class="basket-summary__text">Your have {{totalItems}} items on your order : </h2>
+  <p class="basket-summary__text">You have <b>{{totalItems}}</b> items on your order : </p>
   {{#each items}}
   <div class="basket-item">
     <div class="basket-item__image"></div>
     <div class="basket-item__info">
-      <p class="basket-item__name"> Product: {{name}} </p>
-      <p class="basket-item__price">£ Subtotal: {{subtotal}}</p>
+      <p class="basket-item__name">Product: {{name}} </p>
       <p class="basket-item__quantity">Quantity: {{quantity}}</p>
+      <p class="basket-item__price">Price: £{{price}}</p>
     </div>
     <div class="basket-buttons">
-      <button class="btn btn-primary sum" id="add" onclick="addOne()">+</button>
-      <button class="btn btn-primary rest">-</button>
+      <button class="btn btn-primary sum" id="add" onclick="addOne()"><i class="fa fa-plus"
+          aria-hidden="true"></i></button>
+      <button class="btn btn-primary rest"><i class="fa fa-minus" aria-hidden="true"></i></button>
     </div>
+    <p class="basket-item__subtotal">Subtotal: £{{subtotal}}</p>
   </div>
   {{/each}}
-  <h2 class="basket-total__amount">Total Order: {{total}}</h2>
-  <h2 class="basket-total__qty">Total Order Quantity: {{totalItems}}</h2>
-  <button class="btn btn-primary rest">Checkout</button>
+  <h4 class="basket-total__amount">Total (Including VAT): £{{total}}</h4>
+  <h5 class="basket-total__qty">Total Order Quantity: {{totalItems}}</h5>
+  <button class="btn btn-primary checkout">CHECKOUT <i class="fas fa-angle-right"></i></button>
   {{else}}
   <h2>no products added yet</h2>
   {{/ if}}
 </div>
+<footer class="footer-wrapper">
+  <div class="footer-section__featured">
+    <h4 class="footer-section about"><i class="fas fa-angle-down arrow"></i>
+      <input id="check01" type="checkbox" name="About this App" />
+      <label for="check01" class="footer-label">About this App</label>
+      <ul class="dropdown">
+        <li class="dropdown-link">About Us</li>
+        <li class="dropdown-link">Our Vision & Values</li>
+        <li class="dropdown-link">Allergies & Nutritional</li>
+        <li class="dropdown-link">Contact Us</li>
+      </ul>
+    </h4>
+    <h4 class="footer-section corporate"><i class="fas fa-angle-down arrow"></i>
+      <input id="check02" type="checkbox" name="Corporate" />
+      <label for="check02" class="footer-label">Corporate</label>
+      <ul class="dropdown">
+        <li class="dropdown-link">Franchising</li>
+        <li class="dropdown-link">Investor Relations</li>
+        <li class="dropdown-link">Media</li>
+        <li class="dropdown-link">Working For Us</li>
+      </ul>
+    </h4>
+    <h4 class="footer-section follow"><i class="fas fa-angle-down arrow"></i>
+      <input id="check03" type="checkbox" name="Follow Us" />
+      <label for="check03" class="footer-label">Follow Us</label>
+      <ul class="dropdown">
+        <li class="dropdown-link">Facebook logo</li>
+        <li class="dropdown-link">Twitter logo</li>
+        <li class="dropdown-link">Instagram logo</li>
+        <li class="dropdown-link">Other logo</li>
+      </ul>
+    </h4>
+  </div>
+  <div class="footer-section__links">
+    <p>Stores near me</p>
+    <p>Terms of Use</p>
+    <p>Terms and Conditions</p>
+    <p>Privacy Policy</p>
+    <p>Marketing Preferences</p>
+    <p>Cookie Policy</p>
+    <p>Boring Legal Stuff</p>
+  </div>
+  <p class="footer-section__copyright">2020 Pizza App Rights</p>
+</footer>

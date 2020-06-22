@@ -204,13 +204,12 @@ ul li ul li {
 }
 
 .basket-quantity {
-  margin : 2% 0 0 20%;
+  margin-left: 15%;
+  margin-top: 3%;
   background-color: #789e37;
-  border: #789e37;
-  color : white;
   height: 50%;
-  padding :1% 3%;
-  border-radius : 5px;
+  padding: 2% 4%;
+  border-radius: 4px;
 }
 
 .fa-shopping-basket {
@@ -552,7 +551,7 @@ hr {
 /* FOOTER */
 
 .footer-wrapper {
-  margin-top: 45%;
+  margin-top: 15%;
   text-align: center;
 }
 
@@ -629,6 +628,99 @@ input#check03:checked~ul.dropdown {
   background-color:white;
 }
 
+/* ORDER PAGE */
+.basket-container {
+  margin: 0 10px;
+}
+
+.basket-summary__text{
+margin:25% 0 15% 0;
+
+}
+.basket-summary__amount{
+margin-left: 85%;
+
+}
+
+/* BUTTONS STYLES */
+.btn {
+  text-align: center;
+  vertical-align: middle;
+  padding: .67em .67em;
+  cursor: pointer;
+  width: 150%;
+}
+
+.btn-primary {
+  color: white;
+  
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+}
+.sum {
+  background-color: #789e37;
+}
+
+.rest {
+  background-color: #c4122e;
+  margin-left: 5%;
+  }
+
+.basket-summary__text,
+.basket-buttons {
+  margin-left : 5%;
+}
+
+.basket-item {
+  display: flex;
+  flex-flow: row wrap;
+  margin : 5% 5% 0 5%;
+  height: auto;
+  width: auto;
+  padding-bottom:2%;
+  border-bottom:1px solid lightgrey;
+}
+
+.basket-item__image {
+  width: 30%;
+  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Side/256x256/1907-SID-Garlic-Dippers.jpg?v=2fe77e326ab1c62215f148e77ca028cf');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-right:10%;
+}
+
+.basket-item__info {
+  flex-flow: row wrap;
+  font-size: 20px;
+  width: 55%;
+}
+
+.basket-buttons {
+  display: flex;
+  width: 30%;
+  justify-content: space-evenly;
+  margin: 0;
+}
+
+.basket-item__subtotal {
+  margin: 5% 0 0 10%;
+  color: #006491;
+  font-weight: bold;
+}
+
+.basket-total__amount {
+  margin-top: 10%;
+  color: #006491;
+}
+.basket-total__qty {
+  margin-bottom: 10%;
+}
+
+.checkout {
+  background-color: #789e37;
+  width: 100%;
+}
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
   .submenu-heading__main--collect {
@@ -663,6 +755,7 @@ input#check03:checked~ul.dropdown {
 
     .basket-quantity {
       margin-left: 25%;
+      background-color: #5B782A;
     }
 
 /* PROMOTIONS */
@@ -806,7 +899,8 @@ input#check03:checked~ul.dropdown {
 
   .footer-wrapper {
     display: block;
-  }
+    margin-left: 1.2%;
+}
 
   .footer-section__featured {
     display: flex;
@@ -816,9 +910,58 @@ input#check03:checked~ul.dropdown {
 
   .footer-section.about,
   .footer-section.corporate,
-  .footer-section.follow{
-    width: 30%;
+  .footer-section.follow {
+    width: 31%;
   } 
+
+  /* ORDER PAGE */
+
+  .basket-item {
+    font-size: 25px;
+  }
+
+  .basket-item__image {
+    margin-right: 5%;
+  }
+
+  .basket-summary__text{
+    margin: 15% 25% 10% 25%;
+  }
+
+  .basket-item__info {
+    flex-flow: row nowrap;
+    font-size: 25px;
+    width: 25%;
+  }
+
+  .basket-buttons {
+    
+    margin-left: 5%;
+  }
+  
+  .basket-total__amount,
+  .basket-total__qty {
+    margin-left: 30%;
+    font-size:30px;
+  }
+
+  .sum,
+  .rest {
+    height: 40%;
+    width: 25%;
+    margin-top: 10%;
+  }
+
+  .rest {
+    margin-left: -15%;
+  }
+  .basket-item__subtotal {
+    margin:0 0 0 72%;
+  }
+.checkout {
+  font-size: 30px;
+}
+ 
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1199px) {
@@ -960,6 +1103,75 @@ input#check03:checked~ul.dropdown {
   .menu-item {
   width: 23%;
   }
+
+  /* FOOTER */
+
+  .footer-wrapper {
+    display: block;
+    margin-left: 1%;
+  }
+
+  .footer-section__featured {
+    display: flex;
+    flex-flow: row wrap;
+   
+  }
+
+  .footer-section.about,
+  .footer-section.corporate,
+  .footer-section.follow{
+    width: 31.4%;
+  } 
+
+  /* ORDER PAGE */
+
+  .basket-item {
+    font-size: 25px;
+  }
+
+  .basket-item__image {
+    margin-right: 5%;
+  }
+
+  .basket-summary__text{
+    margin: 15% 25% 10% 25%;
+  }
+
+  .basket-item__info {
+    flex-flow: row nowrap;
+    font-size: 25px;
+    width: 25%;
+  }
+
+  .basket-buttons {
+    
+    margin-left: 5%;
+  }
+  
+  .basket-total__amount,
+  .basket-total__qty {
+    margin-left: 30%;
+    font-size:30px;
+  }
+
+  .sum,
+  .rest {
+    height: 40%;
+    width: 25%;
+    margin-top: 10%;
+  }
+
+  .rest {
+    margin-left: -15%;
+  }
+  .basket-item__subtotal {
+    margin:0 0 0 72%;
+  }
+.checkout {
+  font-size: 30px;
+}
+
+  
 }
 
 /* BACKGROUND IMAGES */
@@ -1015,56 +1227,7 @@ background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drin
 }
   
 
-/* BUTTONS STYLES */
-.btn {
-  text-align: center;
-  vertical-align: middle;
-  padding: .67em .67em;
-  cursor: pointer;
-  width: 100%;
-}
 
-.btn-primary {
-  color: white;
-  
-  border: none;
-  border-radius: .3em;
-  font-weight: bold;
-}
-.sum {
-  background-color: lawngreen;
-}
-
-.rest {
-  background-color: red;
-  }
-
-/* ORDER PAGE STYLES */
-
-.basket-summary__text,
-.basket-buttons {
-  margin-left : 5%;
-}
-
-.basket-item {
-  display: flex;
-  margin : 5% 5% 0 5%;
-  height: auto;
-  width: auto;
-  padding-bottom:2%;
-  border-bottom:1px solid lightgrey;
-}
-
-.basket-item__image {
-  width: 50%;
-  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Side/256x256/1907-SID-Garlic-Dippers.jpg?v=2fe77e326ab1c62215f148e77ca028cf');
-  background-size: 65%;
-  background-repeat: no-repeat;
-}
-
-.basket-buttons {
-  justify-content: space-evenly;
-}
 
 
 
