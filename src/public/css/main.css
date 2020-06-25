@@ -415,7 +415,6 @@ ul li ul li {
 }
 
 .menu-item__image {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3e/Pizza_au_thon%2C_Tunisie_4_mai_2017.jpeg');
   background-size: cover;
   width: 100%;
   height: 150px;
@@ -460,10 +459,12 @@ ul li ul li {
   height: 20px;
 }
 
-.my-pizza-icon{
+.my-pizza-icon {
   border:2px solid #fff;
-  float: right;
-  margin: 5px 5px 0 0;
+  margin: 0 auto;
+  float: right; 
+  left: 86%;
+  transform: translate(-50%,-600%);
 }
 
 .menu-item__customise,
@@ -887,10 +888,12 @@ margin-left: 85%;
     background-color: #fff;
     padding:0;
   }
+
   .menu-item__price.sides,
   .menu-item__selectbox.sides {
     width: 35%;
   }
+
   .menu-item__add.ipad {
     width: 100%;
   }
@@ -900,7 +903,7 @@ margin-left: 85%;
   .footer-wrapper {
     display: block;
     margin-left: 1.2%;
-}
+  }
 
   .footer-section__featured {
     display: flex;
@@ -935,7 +938,6 @@ margin-left: 85%;
   }
 
   .basket-buttons {
-    
     margin-left: 5%;
   }
   
@@ -955,13 +957,14 @@ margin-left: 85%;
   .rest {
     margin-left: -15%;
   }
+
   .basket-item__subtotal {
     margin:0 0 0 72%;
   }
+
 .checkout {
   font-size: 30px;
-}
- 
+  }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1199px) {
@@ -978,6 +981,7 @@ margin-left: 85%;
   .submenu-heading__main--collect {
     width: 30%;
   }
+
   .promotion-picture {
     width: 100%;
     height: 15rem;
@@ -1114,8 +1118,7 @@ margin-left: 85%;
   .footer-section__featured {
     display: flex;
     flex-flow: row wrap;
-   
-  }
+   }
 
   .footer-section.about,
   .footer-section.corporate,
@@ -1144,7 +1147,6 @@ margin-left: 85%;
   }
 
   .basket-buttons {
-    
     margin-left: 5%;
   }
   
@@ -1164,68 +1166,18 @@ margin-left: 85%;
   .rest {
     margin-left: -15%;
   }
+
   .basket-item__subtotal {
     margin:0 0 0 72%;
   }
+
 .checkout {
   font-size: 30px;
+  }
 }
 
-  
-}
 
-/* BACKGROUND IMAGES */
 
-/* SIDES */
-.menu-item__image.dippers {
-  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Side/256x256/1907-SID-Garlic-Dippers.jpg?v=2fe77e326ab1c62215f148e77ca028cf');
-}
-.menu-item__image.garlic {
-background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Side/256x256/1907-SID-Garlic-Pizza.jpg?v=fc9998be5ccfdd747f58d17afb3a8016');
-}
-
-.menu-item__image.potato {
-  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Side/256x256/1907-SID-Potato-Wedges.jpg?v=5929897e0e3769500673e1d0d0c7d87e');
-}
-.menu-item__image.dough {
-  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Side/256x256/1907-SID-Twisted-Doughballs-Pepperoni.jpg?v=048974218c4e3fff40bb87de0cba0f79')
-}
-
-/* DESSERTS */
-
-.menu-item__image.cookies {
-  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Dessert/256x256/1907-DES-Cookies.jpg?v=1efc9d35e0cabcf52ebfbd8880d51035');
-}
-
-.menu-item__image.vanilla {
-  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Dessert/256x256/1907-DES-BJ-Caramel-Chew-Chew.jpg?v=fa1339fbb63f08c1c398bd86042f4bb9');
-}
-
-.menu-item__image.mint {
-  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Dessert/256x256/1907-DES-BJ-Birthday-Cake.jpg?v=d9647cdcd894c61df06ebd10d63daf49');
-}
-
-.menu-item__image.magnum{
-  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Dessert/256x256/1907-DES-Magnum-White-Tub.jpg?v=0b8063a529e94f408590252d922b5312');
-}
-
-/* DRINKS */
-
-.menu-item__image.water {
-background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drink/256x256/1907-DRI-Smartwater-600ml.jpg?v=848559acf4043eac890c55f6ac133185');
-}
-
-.menu-item__image.diet {
-  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drink/256x256/1907-DRI-Diet-Coke.jpg?v=fce7fa38e90d557fbbfb3eec2d673c94');
-}
-.menu-item__image.classic {
-  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drink/256x256/1907-DRI-Coca-Cola.jpg?v=a9e504fd285586b57497e49a1eb90775');
-}
-
-.menu-item__image.fanta {
-  background-image: url('https://www.dominos.co.uk/Content/images/Products/GB/Drink/256x256/1907-DRI-Fanta-Orange.jpg?v=c7cdeca16d5eb8312d4219a516c285f8');
-}
-  
 
 
 

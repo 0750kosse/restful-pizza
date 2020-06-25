@@ -19,7 +19,7 @@ async function getMenu(req, res, next) {
   let pizzas = productList.filter((item) => item.category === "Pizza");
   let sides = productList.filter((item) => item.category === "Sides");
   let desserts = productList.filter((item) => item.category === "Desserts");
-  let drinks = productList.filter((item) => item.category === "Bebidas");
+  let drinks = productList.filter((item) => item.category === "Drinks");
   res.render('menu', {
     title: 'Your pizza place',
     pizzaCat: pizzas,
