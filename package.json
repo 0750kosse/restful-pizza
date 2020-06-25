@@ -16,7 +16,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/app.js"
+    "start": "nodemon src/app.js",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/0750kosse/restful-pizza/issues"
   },
-  "homepage": "https://github.com/0750kosse/restful-pizza#readme"
+  "homepage": "https://github.com/0750kosse/restful-pizza#readme",
+  "engines": {
+    "node": "11.2"
+  }
 }
