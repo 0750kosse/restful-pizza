@@ -35,4 +35,10 @@ function updateBasket(orderQty, orderPrice) {
   document.querySelector('.basket-amount').innerHTML = `£${orderPrice}`;
 }
 
+function orderPage() {
+  document.querySelector(".submenu-heading__main--basket").onclick = () => {
+    location.href = "http://localhost:5000/order"
+  }
+}
+
 onReady(init);
