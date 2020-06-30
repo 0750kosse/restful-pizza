@@ -418,6 +418,7 @@ ul li ul li {
   background-size: cover;
   width: 100%;
   height: 150px;
+  margin-bottom: -18%;
 }
 
 .menu-item__name,
@@ -439,7 +440,8 @@ ul li ul li {
 
 .menu-item__name {
   text-indent:4px;
-}
+  padding-top: 9%;
+ }
 
 .menu-item__size {
   text-indent:1px;
@@ -882,6 +884,14 @@ margin-left: 85%;
     width: 31%;
   }
 
+  .menu-item__image {
+    margin-bottom: -16%;
+  }
+
+  .menu-item__name {
+    padding-top: 5%;
+  }
+
   .menu-item__size.sides {
     display: flex;
     flex-flow: row wrap;
@@ -1108,6 +1118,10 @@ margin-left: 85%;
   width: 23%;
   }
 
+  .menu-item__image {
+    margin-bottom: -16%;
+  }
+
   /* FOOTER */
 
   .footer-wrapper {
@@ -1174,6 +1188,45 @@ margin-left: 85%;
 .checkout {
   font-size: 30px;
   }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    margin: 0 15%;
+  }
+
+  .submenu-heading {
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    /* position: fixed; */
+    top: 0;
+    width: 70%;
+    margin-top: -3px;
+  }
+
+  .submenu-heading__main--collect,
+  .submenu-heading__main--menu,
+  .submenu-heading__main--deals
+  .submenu-heading__main--basket {
+    width: 35%;
+    line-height: 60px;
+  }
+
+  .pizza-legend {
+    height: 90px;
+    overflow: hidden;
+  }
+  
+  .menu-item__image {
+    height: 200px;
+    margin-bottom: -9%;
+  }
+
+  .menu-item__name {
+    padding: 10px 0;
+  }
+  
 }
 
 
