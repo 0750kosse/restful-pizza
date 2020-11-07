@@ -4,7 +4,7 @@ const paths = require('./paths');
 const fetch = require('node-fetch');
 
 async function fetchMenu() {
-  let response = await fetch('https://manolopizza.herokuapp.com/api/menu');
+  let response = await fetch('https://dominos-api.herokuapp.com/api/menu');
   let data = await response.json();
   let productArray = await data.product;
   return productArray
