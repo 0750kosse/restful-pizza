@@ -4,7 +4,7 @@ This is an exercise on producing an UI for a take away pizza restaurant (based o
 
 Displays the full menu & allows to select items & displays order, also displaying total quantity ordered & total cost. 
 
-Data served is pulled from https://manolopizza.herokuapp.com/api/menu.
+Data served is pulled from  https://dominos-api.herokuapp.com/api/menu
 
 Code for this on : https://github.com/0750kosse/rest-pizza-shop.
 
