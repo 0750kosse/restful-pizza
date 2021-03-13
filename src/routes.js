@@ -57,6 +57,7 @@ async function addItemToBasket(item, basket = {}) {
       ...basket,
       [item]: {
         name: item,
+        productImage: apiItem[0].productImage,
         quantity: basket[item].quantity + 1,
         price: apiItem[0].price,
         subtotal: (basket[item].quantity + 1) * apiItem[0].price
@@ -65,6 +66,7 @@ async function addItemToBasket(item, basket = {}) {
   } else {
     basket[item] = {
       name: item,
+      productImage: apiItem[0].productImage,
       quantity: 1,
       price: apiItem[0].price,
       subtotal: apiItem[0].price
