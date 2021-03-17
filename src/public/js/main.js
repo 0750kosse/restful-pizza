@@ -15,8 +15,7 @@ function addEventListeners() {
 
 async function addToBasket(e) {
   e.preventDefault();
-
-  const response = await fetch('http://localhost:5000/basket', {
+  const response = await fetch('https://pizzadominos.herokuapp.com/basket', {
     method: 'post',
     headers: {
       'Accept': 'application/json',
@@ -24,6 +23,7 @@ async function addToBasket(e) {
     },
     body: JSON.stringify({ name: e.target.name })
   });
+
   const data = await response.json();
   const orderQty = data.basket.totalItems;
   const price = data.basket.total;
@@ -37,7 +37,7 @@ function updateBasket(orderQty, orderPrice) {
 
 function orderPage() {
   document.querySelector(".submenu-heading__main--basket").onclick = () => {
-    location.href = "http://localhost:5000/order"
+    location.href = "https://pizzadominos.herokuapp.com/order"
   }
 }
 

@@ -18,7 +18,7 @@
   <p class="basket-summary__text">You have <b>{{totalItems}}</b> items on your order : </p>
   {{#each items}}
   <div class="basket-item">
-    <img src="http://localhost:3050/{{productImage}}" alt="productImage" class="basket-item__image">
+    <img src="{{productImage}}" alt="productImage" class="basket-item__image">
     <div class="basket-item__info">
       <p class="basket-item__name">Product: {{name}} </p>
       <p class="basket-item__quantity">Quantity: {{quantity}}</p>
